@@ -1,0 +1,39 @@
+site_name: Model Data Stack Learning Collection Site
+site_description: Learning Materials
+site_author: 'Vicky Guo'
+
+theme:
+  name: 'material'
+
+
+copyright: 'Copyright &copy; 2021 Vicky Guo'
+
+repo_name: 'GitHub'
+docs_dir: docs/
+repo_url: https://github.com/VickyGuo0907/datastack-learning
+edit_uri: edit/master/docs/
+
+# Plugins
+plugins:
+  - search
+
+# Launch external urls in separate tab
+extra_javascript:
+  - js/links_in_new_tabs.js
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - smarty
+  - meta
+  - toc:
+      permalink: True
+  - attr_list
+  
+#Page tree
+nav:
+  - Home: index.md
+  - Data Stack Concept:
+    - Base Concept: concept/base-concept.md
+
+
