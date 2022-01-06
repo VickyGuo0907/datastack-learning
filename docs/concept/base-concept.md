@@ -1,15 +1,29 @@
 # Basic Concept Knowledge
 
-## Modern Data Stack
+Below would be all related knowledge you should know related with Modern Data Stack
 
 
-### What is the Modern Data Stack? 
->[Reference Article](https://continual.ai/post/the-future-of-the-modern-data-stack)
+## ETL vs ELT
 
-The Modern Data Stack commonly refers to a collection of technologies that comprise a cloud-native data platform, generally leveraged to reduce the complexity in running a traditional data platform. The individual components are not fixed, but they typically include: 
+### ETL --- Extract, Transforming, Loading
 
-* A Cloud Data Warehouse, such as [Snowflake](https://www.snowflake.com/), [Redshift](https://aws.amazon.com/pm/redshift), [BigQuery](https://cloud.google.com/bigquery), or [Databricks Delta Lake](https://databricks.com/product/delta-lake-on-databricks)
-* A Data Integration Service, such as [Fivetran](http://fivetran.com/), [Segment](http://segment.com/), or [Airbyte](http://airbyte.io/)
-* A ELT data transformation tool, almost certainly [dbt](https://www.getdbt.com/)
-* A BI layer, such as [Looker](https://looker.com/) or [Mode](http://mode.com/) 
-* A Reverse ETL tool, such as [Census](http://getcensus.com/) or [Hightouch](http://hightouch.io/) 
+> Reference articles:
+> 
+> 1. [What's ETL](https://www.talend.com/resources/what-is-etl/)
+
+ETL makes it possible to migrate data between a variety of sources, destinations, and analysis tools. As a result, the ETL process plays a critical role in producing business intelligence and executing broader data management strategies.
+
+
+### ELT --- Extract, Loading, Transforming
+
+
+## OLTP and OLAP
+
+> Reference Articles:
+>
+> 1. [OLTP and OLAP: a practical comparison](https://www.stitchdata.com/resources/oltp-vs-olap/)
+
+### OLTP --- Online Transaction Processing
+
+
+### OLAP --- Online Aanytical Processing
