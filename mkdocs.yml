@@ -1,12 +1,12 @@
-site_name: Model Data Stack Learning Collection Site
+site_name: Model Data Stack Learning 
 site_description: Learning Materials
 site_author: 'Vicky Guo'
 
 theme:
-  name: 'material'
+  name: 'readthedocs'
 
 
-copyright: 'Copyright &copy; 2021 Vicky Guo'
+copyright: 'Copyright &copy; 2022 Vicky Guo'
 
 repo_name: 'GitHub'
 docs_dir: docs/
@@ -35,5 +35,11 @@ nav:
   - Home: index.md
   - Data Stack Concept:
     - Base Concept: concept/base-concept.md
+    - Modern Data Stack: concept/modern-data-stack.md
+    - Modern Data Stack V2: concept/modern-data-stack-v2.md
+  - Data Gavernance:
+    - Metadata Management: datagov/metadata-tools.md
+
+
 
 
