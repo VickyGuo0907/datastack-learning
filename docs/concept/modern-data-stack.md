@@ -28,6 +28,7 @@
 > Reference Articles:
 >
 > 1. [The Modern data stack an overview](https://medium.com/weareinclined/the-modern-data-stack-an-overview-7f4fcfb58355)
+> 2. [THe Modern Data Stack: Open Source Edition](https://www.datafold.com/blog/the-modern-data-stack-open-source-edition)
 
 
 ![zoomify](imgs/modern-data-stack.png)<br></br>
