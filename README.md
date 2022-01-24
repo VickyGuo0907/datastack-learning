@@ -3,7 +3,7 @@ This is for Modern Data Stack learning
 
 [![CI github pages](https://github.com/VickyGuo0907/datastack-learning/actions/workflows/gh-page.yml/badge.svg?branch=main)](https://github.com/VickyGuo0907/datastack-learning/actions/workflows/gh-page.yml)
 
-[![pages-build-deployment](https://github.com/VickyGuo0907/datastack-learning/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main&event=deployment_status)](https://github.com/VickyGuo0907/datastack-learning/actions/workflows/pages/pages-build-deployment)
+[![pages-build-deployment](https://github.com/VickyGuo0907/datastack-learning/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/VickyGuo0907/datastack-learning/actions/workflows/pages/pages-build-deployment)
 
 ## Overview
 
