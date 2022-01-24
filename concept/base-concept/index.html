@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Vicky Guo">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Base Concept - Model Data Stack Learning</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Base Concept";
+    var mkdocs_page_input_path = "concept/base-concept.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Model Data Stack Learning</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data Stack Concept</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Base Concept</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#etl-vs-elt">ETL vs ELT</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#etl-extract-transforming-loading">ETL --- Extract, Transforming, Loading</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#elt-extract-loading-transforming">ELT --- Extract, Loading, Transforming</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#when-is-elt-the-right-choice">When is ELT the right choice?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#etl-vs-elt-understanding-the-different">ETL vs ELT: Understanding the different</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#elt-and-data-lakes-the-future-of-data-integration">ELT and Data Lakes: The Future of Data Integration?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#oltp-and-olap">OLTP and OLAP</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#oltp-online-transaction-processing">OLTP --- Online Transaction Processing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#olap-online-aanytical-processing">OLAP --- Online Aanytical Processing</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-lake-vs-data-warehouse">Data Lake vs Data WareHouse</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#data-lake">Data Lake</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modern-data-stack/">Modern Data Stack</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modern-data-stack-v2/">Modern Data Stack V2</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modern-analytics-stack/">Modern Analytics Stack</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data Workflow tools</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../dataflow/base-concept/">Base Concept</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../dataflow/task-tools/">Task Orchestration Tools</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data Gavernance</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../datagov/metadata-tools/">Metadata Management</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Model Data Stack Learning</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Data Stack Concept &raquo;</li>
+        
+      
+    
+    <li>Base Concept</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/VickyGuo0907/datastack-learning/edit/master/docs/concept/base-concept.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="basic-concept-knowledge">Basic Concept Knowledge<a class="headerlink" href="#basic-concept-knowledge" title="Permanent link">&para;</a></h1>
+<p>Below would be all related knowledge you should know related with Modern Data Stack</p>
+<h2 id="etl-vs-elt">ETL vs ELT<a class="headerlink" href="#etl-vs-elt" title="Permanent link">&para;</a></h2>
+<h3 id="etl-extract-transforming-loading">ETL &mdash; Extract, Transforming, Loading<a class="headerlink" href="#etl-extract-transforming-loading" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Reference articles:</p>
+<ol>
+<li><a href="https://www.talend.com/resources/what-is-etl/">What&rsquo;s ETL</a></li>
+</ol>
+</blockquote>
+<p>ETL makes it possible to migrate data between a variety of sources, destinations, and analysis tools. As a result, the ETL process plays a critical role in producing business intelligence and executing broader data management strategies.</p>
+<h3 id="elt-extract-loading-transforming">ELT &mdash; Extract, Loading, Transforming<a class="headerlink" href="#elt-extract-loading-transforming" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Reference articles:</p>
+<ol>
+<li><a href="https://www.talend.com/resources/what-is-elt/">What&rsquo;s ELT</a></li>
+</ol>
+</blockquote>
+<p>Extract/load/transform (ELT) similarly extracts data from one or multiple remote sources, but then loads it into the target data warehouse without any other formatting. The transformation of data, in an ELT process, happens within the target database. ELT asks less of remote sources, requiring only their raw and unprepared data.</p>
+<h3 id="when-is-elt-the-right-choice">When is ELT the right choice?<a class="headerlink" href="#when-is-elt-the-right-choice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When ingestion speed is the number one priority</li>
+<li>When more intel is better intel</li>
+<li>When you know you will need to scale</li>
+</ul>
+<h3 id="etl-vs-elt-understanding-the-different">ETL vs ELT: Understanding the different<a class="headerlink" href="#etl-vs-elt-understanding-the-different" title="Permanent link">&para;</a></h3>
+<p>The primary differences between ETL and ELT are how much data is retained in data warehouses and where data is transformed.</p>
+<ul>
+<li>
+<p>With ETL, the transformation of data is done before it is loaded into a data warehouse. This enables analysts and business users to get the data they need faster, without building complex transformations or persistent tables in their business intelligence tools.</p>
+</li>
+<li>
+<p>Using the ELT approach, data is loaded into the warehouse or data lake as is, with no transformation before loading. This makes jobs easier to configure because it only requires an origin and a destination.</p>
+</li>
+</ul>
+<p>The ETL and ELT approaches to data integration differ in several key ways.</p>
+<ul>
+<li><strong>Load time</strong> — It takes significantly longer to get data from source systems to the target system with ETL.</li>
+<li><strong>Transformation time</strong> — ELT performs data transformation on-demand, using the target system&rsquo;s computing power, reducing wait times for transformation.</li>
+<li><strong>Complexity</strong> — ETL tools typically have an easy-to-use GUI that simplifies the process. ELT requires in-depth knowledge of BI tools, masses of raw data, and a database that can transform it effectively.</li>
+<li><strong>Data warehouse support</strong> — ETL is a better fit for legacy on-premise data warehouses and structured data. ELT is designed for the scalability of the cloud.</li>
+<li><strong>Maintenance</strong> — ETL requires significant maintenance for updating data in the data warehouse. With ELT, data is always available in near real-time.</li>
+</ul>
+<h3 id="elt-and-data-lakes-the-future-of-data-integration">ELT and Data Lakes: The Future of Data Integration?<a class="headerlink" href="#elt-and-data-lakes-the-future-of-data-integration" title="Permanent link">&para;</a></h3>
+<p>Modern, cloud-based infrastructure technologies offer large amounts of data storage and scalable computing power at lower costs, making it possible to keep petabytes of data in large and expandable data lakes, and process it quickly on-demand. The proliferation of data lakes has made it possible for more organizations to move from ETL to ELT.</p>
+<ul>
+<li>
+<p>Benefits of using ELT in the cloud</p>
+<ul>
+<li><strong>Scalability</strong></li>
+<li><strong>(Almost) seamless integration</strong></li>
+<li><strong>Open Source</strong></li>
+<li><strong>Lower cost of ownership</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="oltp-and-olap">OLTP and OLAP<a class="headerlink" href="#oltp-and-olap" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Reference Articles:</p>
+<ol>
+<li><a href="https://www.stitchdata.com/resources/oltp-vs-olap/">OLTP and OLAP: a practical comparison</a></li>
+</ol>
+</blockquote>
+<h3 id="oltp-online-transaction-processing">OLTP &mdash; Online Transaction Processing<a class="headerlink" href="#oltp-online-transaction-processing" title="Permanent link">&para;</a></h3>
+<h3 id="olap-online-aanytical-processing">OLAP &mdash; Online Aanytical Processing<a class="headerlink" href="#olap-online-aanytical-processing" title="Permanent link">&para;</a></h3>
+<h2 id="data-lake-vs-data-warehouse">Data Lake vs Data WareHouse<a class="headerlink" href="#data-lake-vs-data-warehouse" title="Permanent link">&para;</a></h2>
+<h3 id="data-lake">Data Lake<a class="headerlink" href="#data-lake" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Reference articles:</p>
+<ol>
+<li><a href="https://www.talend.com/resources/what-is-data-lake/">What&rsquo;s a Data Lake?</a></li>
+</ol>
+</blockquote>
+<p>A data lake is a central storage repository that holds big data from many sources in a raw, granular format.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../modern-data-stack/" class="btn btn-neutral float-right" title="Modern Data Stack">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2022 Vicky Guo</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/VickyGuo0907/datastack-learning/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../modern-data-stack/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../js/links_in_new_tabs.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Vicky Guo">
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Task Orchestration Tools - Model Data Stack Learning</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Task Orchestration Tools";
+    var mkdocs_page_input_path = "dataflow/task-tools.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Model Data Stack Learning</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data Stack Concept</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../concept/base-concept/">Base Concept</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../concept/modern-data-stack/">Modern Data Stack</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../concept/modern-data-stack-v2/">Modern Data Stack V2</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../concept/modern-analytics-stack/">Modern Analytics Stack</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data Workflow tools</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../base-concept/">Base Concept</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Task Orchestration Tools</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-task-orchestration-and-why-is-it-useful">What is Task orchestration and why is it useful?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#which-to-use-comparison">Which to use -- Comparison</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data Gavernance</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../datagov/metadata-tools/">Metadata Management</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Model Data Stack Learning</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Data Workflow tools &raquo;</li>
+        
+      
+    
+    <li>Task Orchestration Tools</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/VickyGuo0907/datastack-learning/edit/master/docs/dataflow/task-tools.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="task-orchestration-tools-and-workflow">Task Orchestration Tools and Workflow<a class="headerlink" href="#task-orchestration-tools-and-workflow" title="Permanent link">&para;</a></h1>
+<p>Recently there’s been an explosion of new tools for orchestrating task- and data workflows (sometimes referred to as “MLOps”). The quantity of these tools can make it hard to choose which ones to use and to understand how they overlap, so we decided to compare some of the most popular ones head to head. </p>
+<p>Overall <strong>Apache Airflow</strong> is both the most popular tool and also the one with the broadest range of features, but Luigi is a similar tool that’s simpler to get started with. <strong>Argo</strong> is the one teams often turn to when they’re already using Kubernetes, and <strong>Kubeflow</strong> and <strong>MLFlow</strong> serve more niche requirements related to deploying machine learning models and tracking experiments.</p>
+<p><img alt="zoomify" src="../imgs/workflow-comparison.png" /><br></br></p>
+<h2 id="what-is-task-orchestration-and-why-is-it-useful">What is Task orchestration and why is it useful?<a class="headerlink" href="#what-is-task-orchestration-and-why-is-it-useful" title="Permanent link">&para;</a></h2>
+<p>Workflow orchestration tools allow you to define <strong>DAGs &ndash; Directed Acyclic Graph</strong> by specifying all of your tasks and how they depend on each other. The tool then executes these tasks on schedule, in the correct order, retrying any that fail before running the next ones. It also monitors the progress and notifies your team when failures happen.</p>
+<p>Overall, the focus of any orchestration tool is ensuring <strong>centralized</strong>, <strong>repeatable</strong>, <strong>reproducible</strong>, and <strong>efficient</strong> workflows: a virtual command center for all of your automated tasks.</p>
+<h2 id="which-to-use-comparison">Which to use &ndash; Comparison<a class="headerlink" href="#which-to-use-comparison" title="Permanent link">&para;</a></h2>
+<p>You should probably use:</p>
+<ul>
+<li><strong>Apache Airflow</strong> if you want the most full-featured, mature tool and you can dedicate time to learning how it works, setting it up, and maintaining it.</li>
+<li><strong>Luigi</strong> if you need something with an easier learning curve than Airflow. It has fewer features, but it’s easier to get off the ground.</li>
+<li><strong>Prefect</strong> if you want something that’s very familiar to Python programmers and stays out of your way as much as possible.</li>
+<li><strong>Argo</strong> if you’re already deeply invested in the Kubernetes ecosystem and want to manage all of your tasks as pods, defining them in YAML instead of Python.</li>
+<li><strong>KubeFlow</strong> if you want to use Kubernetes but still define your tasks with Python instead of YAML. You can also read about our experiences using Kubeflow and why we decided to drop it for our projects at Kubeflow: Not ready for production.</li>
+<li><strong>MLFlow</strong> if you care more about tracking experiments or tracking and deploying models using MLFlow’s predefined patterns than about finding a tool that can adapt to your existing custom workflows.</li>
+</ul>
+<p><img alt="zoomify" src="../imgs/comparison.png" /><br></br></p>
+<p>For a quick overview, we’ve compared the libraries when it comes to: </p>
+<ul>
+<li><strong>Maturity</strong>: based on the age of the project and the number of fixes and commits;</li>
+<li><strong>Popularity</strong>: based on adoption and GitHub stars;</li>
+<li><strong>Simplicity</strong>: based on ease of onboarding and adoption;</li>
+<li><strong>Breadth</strong>: based on how specialized vs. how adaptable each project is;</li>
+<li><strong>Language</strong>: based on the primary way you interact with the tool.</li>
+</ul>
+<p>These are not rigorous or scientific benchmarks, but they’re intended to give you a quick overview of how the tools overlap and how they differ from each other. </p>
+<blockquote>
+<p>Reference Article:</p>
+<ol>
+<li><a href="https://www.datarevenue.com/en-blog/airflow-vs-luigi-vs-argo-vs-mlflow-vs-kubeflow">Workflow Comparision</a></li>
+<li><a href="https://www.datarevenue.com/en-blog/kubeflow-not-ready-for-production">Kubeflow: Not ready for production?</a></li>
+</ol>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../datagov/metadata-tools/" class="btn btn-neutral float-right" title="Metadata Management">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../base-concept/" class="btn btn-neutral" title="Base Concept"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2022 Vicky Guo</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/VickyGuo0907/datastack-learning/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../base-concept/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../datagov/metadata-tools/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../js/links_in_new_tabs.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
