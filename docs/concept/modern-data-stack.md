@@ -31,7 +31,7 @@
 > 2. [THe Modern Data Stack: Open Source Edition](https://www.datafold.com/blog/the-modern-data-stack-open-source-edition)
 
 
-![zoomify](imgs/modern-data-stack.png)<br></br>
+![zoomify](../assets/images/modern-data-stack.png)<br></br>
 
 ### ETL (Extrac, Transform, Load) Tools
 

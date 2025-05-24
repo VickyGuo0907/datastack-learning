@@ -4,7 +4,7 @@ Recently there’s been an explosion of new tools for orchestrating task- and da
 
 Overall **Apache Airflow** is both the most popular tool and also the one with the broadest range of features, but Luigi is a similar tool that’s simpler to get started with. **Argo** is the one teams often turn to when they’re already using Kubernetes, and **Kubeflow** and **MLFlow** serve more niche requirements related to deploying machine learning models and tracking experiments.
 
-![zoomify](imgs/workflow-comparison.png)<br></br>
+![zoomify](../assets/images/workflow-comparison.png)<br></br>
 
 ## What is Task orchestration and why is it useful?
 
@@ -24,7 +24,7 @@ You should probably use:
 * **MLFlow** if you care more about tracking experiments or tracking and deploying models using MLFlow’s predefined patterns than about finding a tool that can adapt to your existing custom workflows.
 
 
-![zoomify](imgs/comparison.png)<br></br>
+![zoomify](../assets/images/comparison.png)<br></br>
 
 For a quick overview, we’ve compared the libraries when it comes to: 
 

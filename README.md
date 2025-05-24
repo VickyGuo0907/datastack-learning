@@ -1,4 +1,5 @@
 # datastack-learning
+This repository contains learning materials and notes focused on the Modern Data Stack, its concepts, components, and tools.
 This is for Modern Data Stack learning 
 
 [![CI github pages](https://github.com/VickyGuo0907/datastack-learning/actions/workflows/gh-page.yml/badge.svg?branch=main)](https://github.com/VickyGuo0907/datastack-learning/actions/workflows/gh-page.yml)

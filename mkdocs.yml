@@ -34,12 +34,11 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Data Stack Concept:
-    - Base Concept: concept/base-concept.md
+    - Base Concept: concept/fundamental-data-concepts.md
     - Modern Data Stack: concept/modern-data-stack.md
     - Modern Data Stack V2: concept/modern-data-stack-v2.md
     - Modern Analytics Stack: concept/modern-analytics-stack.md
   - Data Workflow tools:
-    - Base Concept: dataflow/base-concept.md
     - Task Orchestration Tools: dataflow/task-tools.md
   - Data Gavernance:
     - Metadata Management: datagov/metadata-tools.md

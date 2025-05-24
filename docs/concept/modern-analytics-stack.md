@@ -1,7 +1,7 @@
 # Modern Analytics Stack
 
 
-![zoomify](imgs/modern-analytics-stack.png)<br></br>
+![zoomify](../assets/images/modern-analytics-stack.png)<br></br>
 
 > Reference: 
 >

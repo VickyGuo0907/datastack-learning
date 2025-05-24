@@ -12,7 +12,7 @@ In this current time of growth in the modern data stack, I believe there are fiv
 
 If a company doesn’t have a solid story for how they are collecting, storing, and modifying data, any data science project is doomed before it starts because the foundations upon which it rests is rapidly shifting. 
 
-![zoomify](imgs/data-stack-ai.png)<br></br>
+![zoomify](../assets/images/data-stack-ai.png)<br></br>
 
 > Reference Articles
 >
